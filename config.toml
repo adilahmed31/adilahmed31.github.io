@@ -1,8 +1,8 @@
-baseurl                  = "https://example.com"           # Your domain name
+baseurl                  = "https://adilahmed31.github.io"           # Your domain name
 languageCode             = "en-us"
 defaultContentLanguage   = "en"
 isMultilingual           = false
-title                    = "Call me Sam"
+title                    = "Call me Adil"
 #theme                    = "github.com/victoriadrake/hugo-theme-sam"    # pull in theme as hugo module 
 theme                  = "sam"                      # install theme locally (git clone or submodule)
 pygmentsStyle            = "monokai"                        # https://help.farbox.com/pygments.html
@@ -14,12 +14,12 @@ pygmentsCodefences       = true
     dateformfull         = "Mon Jan 2 2006 15:04:05 EST"
     favicon              = "sam.ico"
     homepage             = "main"                           # What to call the home page link, link will not be rendered if empty
-    footerText           = "Call me Sam, a theme for Hugo."
+    footerText           = "Adil Ahmed, 2022"
 
 # Metadata for Open Graph and Twitter
-    description          = "A new Hugo site."               # Max 160 characters show in search results
+    description          = "A website."               # Max 160 characters show in search results
     images               = ["tn.png"]                       # Image that shows on Twitter cards and Open Graph links to the site
-    title                = "Call me Sam"
+    title                = "Call me Adil"
     # rss                = ""
 
 [[params.videoBackground.sources]]
@@ -43,7 +43,7 @@ pygmentsCodefences       = true
 
 [[params.mainMenu]]
     link = "about"
-    text = "who is sam?"
+    text = "who is Adil?"
 
 [imaging]
     quality = 75
