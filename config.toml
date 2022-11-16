@@ -31,19 +31,11 @@ pygmentsCodefences       = true
 
 [[params.mainMenu]]
     link = "posts"
-    text = "posts"
-
-[[params.mainMenu]]
-    link = "gallery"
-    text = "gallery"
-
-[[params.mainMenu]]
-    link = "portfolio"
-    text = "portfolio"
+    text = "blog"
 
 [[params.mainMenu]]
     link = "about"
-    text = "who is adil?"
+    text = "whoami"
 
 [imaging]
     quality = 75
