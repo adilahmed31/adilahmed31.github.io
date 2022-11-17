@@ -41,6 +41,9 @@ pygmentsCodefences       = true
     link = "mailto:oahmed4@wisc.edu"
     text = "email"
 
+[[params.mainMenu]]
+    link = "https://www.youtube.com/watch?v=mx86-rTclzA"
+    text = "phone"
 
 [imaging]
     quality = 75
