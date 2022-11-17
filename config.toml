@@ -30,12 +30,17 @@ pygmentsCodefences       = true
     overlay = "rgba(0, 0, 0, 0.4)" # optional
 
 [[params.mainMenu]]
-    link = "posts"
-    text = "blog"
+    link = "https://github.com/adilahmed31"
+    text = "github"
 
 [[params.mainMenu]]
-    link = "about"
-    text = "whoami"
+    link = "https://www.linkedin.com/in/adilahmed31"
+    text = "linkedin"
+
+[[params.mainMenu]]
+    link = "mailto:oahmed4@wisc.edu"
+    text = "email"
+
 
 [imaging]
     quality = 75
