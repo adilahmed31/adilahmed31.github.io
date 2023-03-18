@@ -25,34 +25,18 @@ A redirection can either be performed using `window.location.href` or `window.lo
 
 We implement a simple function to hijack every call to href on the page to use replace() instead, as provided below:
 ```
-function new_window ()
-
-{
-
-+new Date;
-
+function new_window(){
 if (!document.getElementsByTagName) return false;
-
-var links = document.getElementsByTagName("a");
-
-for (var eleLink=0; eleLink < links.length; eleLink ++) {
-
-var b = links[eleLink];
-
-if(b.getAttribute("href") && b.hostname == location.hostname){
-
-links[eleLink].onclick =
-
-function() {
-
-window.location.replace(this.href);
-
-return false;
-
-}
-
-}
-
+    var links = document.getElementsByTagName("a");
+    for (var eleLink=0; eleLink < links.length; eleLink ++) {
+        var b = links[eleLink];
+        if(b.getAttribute("href") && b.hostname == location.hostname){
+            links[eleLink].onclick = function() {
+                window.location.replace(this.href);
+                return false;
+            }
+        }
+    }
 }
 ```
 
@@ -65,14 +49,8 @@ Even after re-wiring all the hyperlinks on the page, we still have 2 edge cases.
 
 To combat this, in addition to rewriting every link - we reload the page using location.replace() for every page load from an external site - thereby replacing the history object. Every action on the website will simply update this object. On clicking SAFE EXIT, we're left with one object in the history which says "www.google.com"
 ```
-function reload()
-
-{
-
-window.location.replace(window.location);
-
-}
-
+function reload(){
+    window.location.replace(window.location);
 }
 ```
 Challenge 3: Auto-reload doesn't work when navigating from an external site
@@ -84,67 +62,38 @@ if (!document.referrer || document.referrer.split('/')[2].split(':')[0] != "tech
 The complete implementation:
 ```
 <button onclick="exit1()">SAFE EXIT</button>
-
 function exit1(){
-
-window.location.replace("https://www.google.com");
-
+    window.location.replace("https://www.google.com");
 }
 
 <script>
-
 // Reload the page when linked from the same site
 
 function new_window ()
-
 {
+    if (!document.getElementsByTagName) return false;
 
-+new Date;
-
-if (!document.getElementsByTagName) return false;
-
-var links = document.getElementsByTagName("a");
-
-for (var eleLink=0; eleLink < links.length; eleLink ++) {
-
-var b = links[eleLink];
-
-if(b.getAttribute("href") && b.hostname == location.hostname){
-
-links[eleLink].onclick =
-
-function() {
-
-window.location.replace(this.href);
-
-return false;
-
+    var links = document.getElementsByTagName("a");
+    for (var eleLink=0; eleLink < links.length; eleLink ++) {
+        var b = links[eleLink];
+        if(b.getAttribute("href") && b.hostname == location.hostname){
+            links[eleLink].onclick = function() {
+                window.location.replace(this.href);
+                return false;
+            }
+        }
+    }
 }
-
-}
-
-}
-
-}
-
 // Reload the page when linked from an external site
 
 function reload1()
-
 {
-
-+new Date;
-
-if (!document.referrer || document.referrer.split('/')[2].split(':')[0] != "techclinic.cs.wisc.edu"){
-
-window.location.replace(window.location);
-
-}
-
+    if (!document.referrer || document.referrer.split('/')[2].split(':')[0] != "techclinic.cs.wisc.edu"){
+        window.location.replace(window.location);
+    }
 }
 
 new_window();
-
 reload1();
 
 </script>
