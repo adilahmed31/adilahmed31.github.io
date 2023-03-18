@@ -1,15 +1,13 @@
 ---
-title: "Safe_exit"
+title: "A Safer Exit Button"
 date: 2023-03-18T15:19:42-04:00
 showDate: false
 url: /blog/safe_exit
 ---
 
-# A Safer Exit Button
+*If you would like to skip the preamble and just get the code, [click here](https://gist.github.com/adilahmed31/611a2c48537e90f43a1f65d650663f51)*
 
-*If you would like to skip the preamble and just get the code, (click here)[https://gist.github.com/adilahmed31/611a2c48537e90f43a1f65d650663f51]*
-
-In the fall of 2021, I was volunteering at the (Madison Tech Clinic)[https://techclinic.cs.wisc.edu] to provide technical support to assist victims of technology-enabled surveillance by intimate partners. Simultaneously, we decided to create a simple website to better educate domestic abuse advocates on our services. 
+In the fall of 2021, I was volunteering at the [Madison Tech Clinic](https://techclinic.cs.wisc.edu) to provide technical support to assist victims of technology-enabled surveillance by intimate partners. Simultaneously, we decided to create a simple website to better educate domestic abuse advocates on our services. 
 
 (Un)fortunately, I drew the short straw of designing and deploying the website. Given the nature of the site, we wanted a prominent "Safe Exit" button across every page to allow a user to quickly close the page if needed. With zero experience of any sort of web design, I found this an interesting challenge to work through and decided to write up my observations here. Let me know your thoughts and any possible improvements you can think of! 
 
@@ -19,11 +17,11 @@ The requirements for this button are straightforward:
 2. Clicking the back button should not return the user to our website
 3. The site leaves no trace in the browser history (stretch goal)
 
-I couldn't find any existing implementations that matched all these requirements (most only matched #1) so I decided to make my own. However, a quick shoutout to (Chris Coyier)[https://css-tricks.com/website-escape/]'s simple implementation that served as a valuable starting point.
+I couldn't find any existing implementations that matched all these requirements (most only matched #1) so I decided to make my own. However, a quick shoutout to [Chris Coyier](https://css-tricks.com/website-escape/)'s simple implementation that served as a valuable starting point.
 
 Challenge 1: href() vs replace()
 
-A redirection can either be performed using `window.location.href` or `window.location.replace` . The key (difference)[https://www.geeksforgeeks.org/difference-between-window-location-href-window-location-replace-and-window-location-assign-in-javascript/#:~:text=The%20href%20property%20on%20the,return%20to%20the%20current%20page] here is that `window.location.href` adds the current URL to the history object while the `replace()` function deletes the current object from the history. 
+A redirection can either be performed using `window.location.href` or `window.location.replace` . The key [difference](https://www.geeksforgeeks.org/difference-between-window-location-href-window-location-replace-and-window-location-assign-in-javascript/#:~:text=The%20href%20property%20on%20the,return%20to%20the%20current%20page) here is that `window.location.href` adds the current URL to the history object while the `replace()` function deletes the current object from the history. 
 
 We implement a simple function to hijack every call to href on the page to use replace() instead, as provided below:
 ```
@@ -167,7 +165,7 @@ Requirements #1 and #2 described above worked perfectly across browsers but #3 (
 
 I plan to experiment a litle more with the History API to see if there's a way around it, but I appreciate any thoughts / tips you have which can save me some time! I'd also love to receive any general opinions / feedback / fact-checks. Just cold-email me at adilahmed31@gmail.com
 
-Finally , here's a link to the website: https://techclinic.cs.wisc.edu. If you or someone close is experiencing Intimate-Partner Surveillance, please consult the resources linked on the website for more assistance. 
+Finally , here's a link to the website: [https://techclinic.cs.wisc.edu](https://techclinic.cs.wisc.edu). If you or someone close is experiencing Intimate-Partner Surveillance, please consult the resources linked on the website for more assistance. 
 
 
-*Note: As I have graduated from UW-Madison, I no longer retain formal affiliation to the Madison Tech Clinic*
+*Note: As I have graduated from UW-Madison, I no longer have formal affiliation with the Madison Tech Clinic. All views expressed are personal*
