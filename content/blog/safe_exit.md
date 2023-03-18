@@ -17,7 +17,7 @@ The requirements for this button are straightforward:
 2. Clicking the back button should not return the user to our website
 3. The site leaves no trace in the browser history (stretch goal)
 
-I couldn't find any existing implementations that matched all these requirements (most only matched #1) so I decided to make my own. However, a quick shoutout to [Chris Coyier](https://css-tricks.com/website-escape/)'s simple implementation that served as a valuable starting point.
+I couldn't find any existing implementations that matched all these requirements (most only matched #1) so I decided to make my own. However, the implementation is *highly* derivative of [Chris Coyier](https://css-tricks.com/website-escape/)'s simple implementation that served as a valuable starting point.
 
 Challenge 1: href() vs replace()
 
