@@ -114,7 +114,7 @@ Requirements #1 and #2 described above worked perfectly across browsers but #3 (
 
 I plan to experiment a litle more with the History API to see if there's a way around it, but I appreciate any thoughts / tips you have which can save me some time! I'd also love to receive any general opinions / feedback / fact-checks. Just cold-email me at adilahmed31@gmail.com
 
-Finally , here's a link to the website: [https://techclinic.cs.wisc.edu](https://techclinic.cs.wisc.edu). If you or someone close is experiencing Intimate-Partner Surveillance, please consult the resources linked on the website for more assistance. 
+Finally , here's a link to the website: [https://techclinic.cs.wisc.edu](https://techclinic.cs.wisc.edu). If you or someone you know is experiencing Intimate-Partner Surveillance, please consult the resources linked on the website for more assistance. 
 
 
 *Note: As I have graduated from UW-Madison, I no longer have formal affiliation with the Madison Tech Clinic. All views expressed are personal*
