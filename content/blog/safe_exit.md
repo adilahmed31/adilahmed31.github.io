@@ -2,6 +2,7 @@
 title: "Safe_exit"
 date: 2023-03-18T15:19:42-04:00
 showDate: false
+url: /blog/safe_exit
 ---
 
 # A Safer Exit Button
