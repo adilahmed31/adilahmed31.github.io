@@ -34,7 +34,7 @@ pygmentsCodefences       = true
     text = "me"
 
 [[params.mainMenu]]
-    link = "content/me.md"
+    link = "/me"
     text = "blog"
 
 [[params.mainMenu]]

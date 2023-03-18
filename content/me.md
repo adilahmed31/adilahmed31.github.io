@@ -5,4 +5,4 @@ showDate: false
 url: "/me"
 ---
 
-(github)[https://github.com/adilahmed31]
+[github](https://github.com/adilahmed31)
