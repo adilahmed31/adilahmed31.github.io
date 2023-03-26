@@ -28,16 +28,16 @@ We implement a simple function to hijack every call to href on the page to use r
 ```
 function new_window(){
     if (!document.getElementsByTagName) return false;
-        var links = document.getElementsByTagName("a");
-        for (var eleLink=0; eleLink < links.length; eleLink ++) {
-            var b = links[eleLink];
-            if(b.getAttribute("href") && b.hostname == location.hostname){
-                links[eleLink].onclick = function() {
-                    window.location.replace(this.href);
-                    return false;
-                }
+    var links = document.getElementsByTagName("a");
+    for (var eleLink=0; eleLink < links.length; eleLink ++) {
+        var b = links[eleLink];
+        if(b.getAttribute("href") && b.hostname == location.hostname){
+            links[eleLink].onclick = function() {
+                window.location.replace(this.href);
+                return false;
             }
         }
+    }
 }
 ```
 
@@ -70,8 +70,7 @@ function exit1(){
 <script>
 // Reload the page when linked from the same site
 
-function new_window ()
-{
+function new_window (){
     if (!document.getElementsByTagName) return false;
 
     var links = document.getElementsByTagName("a");
