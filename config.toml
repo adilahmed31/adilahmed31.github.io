@@ -18,7 +18,7 @@ pygmentsCodefences       = true
 
 # Metadata for Open Graph and Twitter
     description          = "A new site."               # Max 160 characters show in search results
-    images               = ["tn.png"]                       # Image that shows on Twitter cards and Open Graph links to the site
+    images               = ["tn2.png"]                       # Image that shows on Twitter cards and Open Graph links to the site
     title                = "Call me Adil"
     # rss                = ""
 

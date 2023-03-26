@@ -27,17 +27,17 @@ A redirection can either be performed using `window.location.href` or `window.lo
 We implement a simple function to hijack every call to href on the page to use replace() instead, as provided below:
 ```
 function new_window(){
-if (!document.getElementsByTagName) return false;
-    var links = document.getElementsByTagName("a");
-    for (var eleLink=0; eleLink < links.length; eleLink ++) {
-        var b = links[eleLink];
-        if(b.getAttribute("href") && b.hostname == location.hostname){
-            links[eleLink].onclick = function() {
-                window.location.replace(this.href);
-                return false;
+    if (!document.getElementsByTagName) return false;
+        var links = document.getElementsByTagName("a");
+        for (var eleLink=0; eleLink < links.length; eleLink ++) {
+            var b = links[eleLink];
+            if(b.getAttribute("href") && b.hostname == location.hostname){
+                links[eleLink].onclick = function() {
+                    window.location.replace(this.href);
+                    return false;
+                }
             }
         }
-    }
 }
 ```
 
