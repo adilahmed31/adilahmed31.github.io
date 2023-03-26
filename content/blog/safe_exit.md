@@ -1,7 +1,8 @@
 ---
 title: "A Safer Exit Button"
 date: 2023-03-18T15:19:42-04:00
-showDate: false
+showDate: true
+draft: false
 url: /blog/safe_exit
 ---
 
@@ -117,4 +118,4 @@ I plan to experiment a litle more with the History API to see if there's a way a
 Finally , here's a link to the website: [https://techclinic.cs.wisc.edu](https://techclinic.cs.wisc.edu). If you or someone you know is experiencing Intimate-Partner Surveillance, please consult the resources linked on the website for more assistance. 
 
 
-*Note: I have graduated from UW-Madison and am no longer affiliated with the Madison Tech Clinic. All views expressed are personal*
+*Note: I have graduated from UW-Madison and am no longer affiliated with the Madison Tech Clinic. All views expressed are personal.*
